@@ -25,7 +25,7 @@ jobs:
     steps:
 
       - name: edit sources.list
-        run: sed -i 's/^# deb-src/deb-src/g' /etc/apt/sources.list && sudo apt update
+        run: sudo sed -i 's/^# deb-src/deb-src/g' /etc/apt/sources.list && sudo apt update
       - name: apt install dependencies
         run: sudo apt update && sudo apt install git && sudo apt-get build-dep linux linux-image-$(uname -r) && sudo apt install libncurses-dev linux-tools-common fakeroot
       - name: git clone code
