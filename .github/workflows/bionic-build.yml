@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: apt update && apt install git fakeroot
+        run: sudo apt update && sudo apt install git fakeroot
       - name: code
         run: mkdir ~/kbuild && cd ~/kbuild && git clone --depth=1 git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/bionic -b hwe-edge
       - name: build
